@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+ xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>{2e8e3862-37db-4af7-b5bf-2eef1d94c7ef}</em:id>
+    <em:name>FireWassr</em:name>
+    <em:description>Wassr client.</em:description>
+    <em:version>1.0.1</em:version>
+    <em:creator>benchan</em:creator>
+    <em:homepageURL></em:homepageURL>
+    <em:iconURL>chrome://wass/skin/wass.png</em:iconURL>
+    <em:optionsURL>chrome://wass/content/prefs.xul</em:optionsURL>
+    <em:targetApplication>
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id> <!-- firefox -->
+        <em:minVersion>3.0</em:minVersion>
+        <em:maxVersion>3.6.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+  </Description>
+</RDF>

@@ -1,0 +1,201 @@
+#wass-1, #wass-2 {
+	list-style-image: url("chrome://wass/skin/main.png");
+}
+#wass-statusbar-button {
+	list-style-image: url("chrome://wass/skin/wass16.png");
+	cursor: pointer;
+}
+#wass_panel {
+	border:none;
+	padding:0;
+	margin:0;
+	background-color:#fff;
+	border:1px solid #ccc;
+}
+.wass_popup {
+	-moz-binding: url('chrome://wass/content/bind.xml#bind');
+	width:340px;
+	height:240px;
+	border:0;
+	background-color:#fff;
+	-moz-border-radius: 2px;
+	opacity: 0.9;
+	padding:0px;
+}
+#wass_panel tab{
+	font-size:10px;
+}
+tabpanels, tabpanel {
+	padding:0;
+	margin:0;
+	background-color:#fff;
+}
+#wass_content, #wass_content_channel, #wass_content_owner,#wass_content_res,#wass_content_public {
+	overflow:auto;
+	height:240px;
+	width:340px;
+	padding:0;
+	margin:0;
+	overflow:-moz-scrollbars-vertical;
+}
+#wass_content_channel_title {
+	padding:2px;
+	-moz-border-radius: 5px;
+	background-color:#F2F7D7;
+	border:1px solid #ccc;
+	/*-moz-box-orient: horizontal;*/
+	height:auto;
+	width:280px;
+	margin:3px 16px 3px 5px;
+}
+#wass_content_channel_title image {
+	margin:2px;
+	cursor: pointer;
+}
+.wass_popup a {
+	color:blue;
+	cursor: pointer;
+}
+.wass_popup a:hover {
+	color:orange;
+	opacity: 0.85;
+}
+.wass_popup hbox.comment_box {
+	background-color:#F2FBF2;
+	padding:4px;
+	-moz-border-radius: 10px;
+	margin-bottom:5px;
+	-moz-box-align: start;
+	width:280px;
+	margin:3px 5px;
+}
+.wass_popup hbox.comment_box_follow {
+	background-color:#FBFCE2;
+	padding:4px;
+	-moz-border-radius: 10px;
+	margin-bottom:5px;
+	-moz-box-align: start;
+	width:280px;
+	margin:3px 5px;
+	border:1px dashed #99CC00;
+}
+#wass_content_channel hbox.comment_box {
+	background-color:#F2F7D7;
+}
+.wass_popup vbox.left {
+	width:38px;
+	-moz-box-pack:start;
+}
+.wass_popup vbox.right {
+	width:260px;
+	margin-left:5px;
+	-moz-box-pack:start;
+}
+.wass_popup a.user_img {
+	-moz-border-radius: 3px;
+	padding:2px;
+	display:block;
+	width:36px;
+	height:36px;
+	text-align:center;
+	vertical-align:text-bottom;
+	background-color:#fff;
+}
+.wass_popup image.user_img {
+	display:inline;
+}
+.wass_popup a.res_anch {
+	color:#999;
+}
+.wass_popup description {
+	display:inline;
+	padding:0;
+}
+.wass_popup .restxt {
+	color:#999;
+}
+.wass_popup .favs image {
+	display:inline;
+	margin:2px;
+	padding:0;
+}
+.wass_popup p {
+	padding:0;
+	margin:2px auto;
+}
+.wass_popup image.user_photo {
+	width:auto;
+	height:auto;
+	cursor: pointer;
+}
+.wass_popup p.user_photo {
+	text-align:inherit;
+}
+.wass_popup .favs {
+	padding:0;
+	border:1px solid #eee;
+	background-color:#fff;
+}
+.wass_popup textbox#wass_input {
+	color:#333;
+	margin:3px;
+	padding:0;
+	-moz-box-pack:end;
+	-moz-box-align: end;
+}
+.resMode textarea {
+	background-color:#FFFACD;
+}
+.wass_popup textbox#wass_input_channel {
+	color:#333;
+	margin:3px;
+	padding:0;
+	-moz-box-pack:end;
+	-moz-box-align: end;
+}
+textarea {
+	border:1px solid #aaa;
+	border:1px solid #999;
+	background-color:#fff;
+	-moz-border-radius: 3px;
+	background-color:#eee;
+	padding:2px;
+}
+.wass_popup image.fav_button {
+	list-style-image: url("chrome://wass/skin/favOff.gif");
+	cursor: pointer;
+	margin:5px 10px;
+	border:1px dotted #aaa;
+}
+.wass_popup image.fav_button[fav="done"] {
+	list-style-image: url("chrome://wass/skin/favOn.gif");
+	cursor: pointer;
+	margin:5px 10px;
+	border:1px dotted #aaa;
+}
+#wass_canvas_wrap {
+	overflow: auto;
+	width:280px;
+	height:150px;
+}
+canvas#wass_canvas {
+	border:1px solid #999;
+	width:100%;
+	height:100%;
+}
+ canvas:-moz-drag-over {
+ border: 1px solid red;
+ background-color:#eee;
+}
+div#wass-capture-box {
+	opacity: 0.75;
+	background-color:yellow;
+	border:1px solid red;
+	position:absolute;
+}
+.date {
+	font-size:10px;
+	text-align:right;
+	color:#999;
+	padding:2px;
+}

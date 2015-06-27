@@ -1,0 +1,8 @@
+content	wass	content/
+skin	wass	classic/1.0	skin/
+overlay	chrome://browser/content/browser.xul	chrome://wass/content/wass.xul
+overlay	chrome://browser/content/browser.xul	chrome://wass/content/data.xul
+overlay	chrome://emusic/content/startup.xul             chrome://wass/content/wass.xul
+overlay chrome://navigator/content/navigatorOverlay.xul chrome://wass/content/wass.xul
+
+locale	wass	ja-JP	locale/ja-JP/

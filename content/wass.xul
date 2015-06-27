@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://wass/skin/wass.css" type="text/css"?>
+<?xml-stylesheet href="chrome://mozapps/content/preferences/preferences.css"?>
+<?xml-stylesheet href="chrome://browser/skin/preferences/preferences.css"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://wass/locale/wass.dtd">
+<overlay id="wass-overlay"
+		xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+		
+<menupopup id="menu_ToolsPopup"> <menuitem id="wass-hello" label="&wass.label;" 
+              oncommand="wass.onMenuItemCommand(event);"/> </menupopup>
+<!--
+<toolbox id="navigator-toolbox">
+	<toolbar id="BrowserToolbarPalettea" toolbarname="ワッサ" customizable="true" defaultset="wass-2,wass-1">
+		<toolbarbutton label="wass" id="wass-1" />
+		<toolbarbutton label="wass2" tooltiptext="bbbb" id="wass-2" />
+	</toolbar>
+</toolbox>
+-->
+<toolbox id="navigator-toolbox">
+  <tooltip id="wass-tooltip" orient="vertical">
+    <description id="wass-status-tooltip" value="&wass.name;"/>
+  </tooltip>
+</toolbox>
+
+<statusbar id="status-bar">
+<!--		    ondblclick="wass.openURI('http://wassr.jp/')"-->
+
+  <statusbarpanel id="wass-statusbar-button" 
+		    class="statusbarpanel-menu-iconic"
+		    context="wass-main-menupopup"
+		    onclick="return wass.onClickStatusbarIcon(event)"
+		    tooltip="wass-tooltip">
+    <label id="wass-statusbar-text" style="margin: 1px" label="new panel" context="aaa" />
+  </statusbarpanel>
+  
+<!--  <keyset id="wass-keyset">
+    <key id="wass-key-insertURL" oncommand="wass.onInsertURL()"/>
+    <key id="wass-key-togglePopup" oncommand="wass.onOpenPopup()"/>
+  </keyset> -->
+  
+  <popupset id="wass-popupset">
+    <menupopup id="wass-main-menupopup">
+	    <menuitem id="wass-menuitem-capture" label="キャプャする" oncommand="wass.setCapture()" />
+    </menupopup>
+    <vbox id="wass-popup"></vbox>
+  </popupset>
+ 
+</statusbar>
+
+<!--
+<script src="chrome://global/content/nsDragAndDrop.js"/>
+<script src="chrome://global/content/nsTransferable.js"/>
+-->
+
+<script src="wass.js"/>
+
+</overlay> 

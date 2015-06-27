@@ -1,0 +1,14 @@
+<!ENTITY wass.hyouji "表示">
+<!ENTITY wass.name "ワッサー">
+<!ENTITY wass.title "ファイヤーワッサー">
+<!ENTITY wass.label "Your localized menuitem">
+<!ENTITY wass.tab.hitokoto "みんなのﾋﾄｺﾄ">
+<!ENTITY wass.tab.channel "チャンネル">
+<!ENTITY wass.tab.owner "自分のﾋﾄｺﾄ">
+<!ENTITY wass.tab.public "日本中のﾋﾄｺﾄ">
+<!ENTITY wass.tab.res "あなたへのﾚｽ">
+<!ENTITY wass.pref.username "ユーザーID">
+<!ENTITY wass.pref.password "パスワード">
+<!ENTITY wass.pref.updatetime "更新間隔（秒）">
+<!ENTITY wass.pref.title "ワッサーの設定">
+

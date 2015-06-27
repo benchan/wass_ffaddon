@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://wass/locale/wass.dtd">
+
+<prefwindow id="wass.pref" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" 
+	title="&wass.pref.title;" bottons="accept,cancel">
+	<prefpane>
+		<preferences>
+			<preference id="wass.username" name="wass.username" type="string" />
+			<preference id="wass.password" name="wass.password" type="string" />
+			<preference id="wass.updatetime" name="wass.updatetime" type="int" />
+		</preferences>
+		
+		<grid flex="1">
+			<columns>
+			<column flex="2"/>
+			<column flex="1"/>
+			</columns>
+
+			<rows>
+				<row>
+					<label value="&wass.pref.username;" />
+					<textbox preference="wass.username" value="" label="username" flex="1" />
+					
+				</row>
+				<row>
+					<label value="&wass.pref.password;" />
+					<textbox preference="wass.password" value="" label="password" type="password" flex="1" />
+				</row>
+				<row>
+					<label value="&wass.pref.updatetime;" />
+					<menulist preference="wass.updatetime" label="wass.updatetime">
+						  <menupopup>
+						    <menuitem label="5" value="5" />
+						    <menuitem label="10" value="10"/>
+						    <menuitem label="15" value="15"/>
+						    <menuitem label="30" value="30"/>
+						    <menuitem label="60" value="60"/>
+						    <menuitem label="180" value="180"/>
+						  </menupopup>
+					</menulist>
+				</row>
+			</rows>
+		</grid>
+
+		
+	</prefpane>
+</prefwindow>

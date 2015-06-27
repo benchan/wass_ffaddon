@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!DOCTYPE overlay SYSTEM "chrome://wass/locale/wass.dtd">
+
+<bindings xmlns="http://www.mozilla.org/xbl"
+          xmlns:html="http://www.w3.org/1999/xhtml"
+          xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+          
+  <binding id="bind">
+	<content>
+
+	<xul:tabbox>
+		<xul:tabs onselect="wass.tabChanged(this.selectedIndex);">
+			<xul:tab label="&wass.tab.hitokoto;" />
+			<xul:tab label="&wass.tab.channel;" />
+			<xul:tab label="&wass.tab.owner;" />
+			<xul:tab label="&wass.tab.res;" />
+			<xul:tab label="&wass.tab.public;" />
+		</xul:tabs>
+
+		<xul:tabpanels>
+			<xul:tabpanel id="tab_hitokoto">
+				<xul:vbox>
+					<xul:vbox id="wass_content" flex="1"></xul:vbox>
+					<html:div id="wass_resname" title=""></html:div>
+					<xul:textbox id="wass_input" multiline="true" onkeypress="wass.onEnter(event);"></xul:textbox>
+				</xul:vbox>
+			</xul:tabpanel>
+			
+			<xul:tabpanel id="tab_channel">
+				<xul:vbox>
+					<xul:vbox id="wass_content_channel_title" flex="1"></xul:vbox>
+					<xul:vbox id="wass_content_channel" flex="2"></xul:vbox>
+					<html:div id="wass_resname_channel" title=""></html:div>
+					<xul:textbox id="wass_input_channel" multiline="true" onkeypress="wass.onEnterChannel(event);" flex="1"></xul:textbox>
+					<!--<xul:filefield id="wass_file_channel" flex="1" />
+					<xul:button oncommand="wass.fileSelect();" label="画像" />
+  					<html:input type="file" name="image" id="wassfile" />-->
+				</xul:vbox>
+			</xul:tabpanel>
+			
+			<xul:tabpanel id="tab_owner">
+				<xul:vbox>
+					<xul:vbox id="wass_content_owner" flex="1"></xul:vbox>
+					<html:div id="wass_resname_owner" title=""></html:div>
+					<xul:textbox id="wass_input_owner" multiline="true" onkeypress="wass.onEnterOwner(event);"></xul:textbox>
+				</xul:vbox>
+			</xul:tabpanel>
+			
+			<xul:tabpanel id="tab_res">
+				<xul:vbox>
+					<xul:vbox id="wass_content_res" flex="1"></xul:vbox>
+					<html:div id="wass_resname_res" title=""></html:div>
+					<xul:textbox id="wass_input_res" multiline="true" onkeypress="wass.onEnterRes(event);"></xul:textbox>
+				</xul:vbox>
+			</xul:tabpanel>
+			
+			<xul:tabpanel id="tab_public">
+				<xul:vbox>
+					<xul:vbox id="wass_content_public" flex="1"></xul:vbox>
+					<html:div id="wass_resname_public" title=""></html:div>
+					<xul:textbox id="wass_input_public" multiline="true" onkeypress="wass.onEnterPublic(event);"></xul:textbox>
+				</xul:vbox>
+			</xul:tabpanel>
+			
+		</xul:tabpanels>
+	</xul:tabbox>
+	
+	<xul:splitter tooltiptext="サイズの変更" oncommand="" collapse="after" resizeafter="flex" state="collapsed" substate="after" id="wass_splitter">
+ 	<xul:grippy style="height:5px;"/>
+	</xul:splitter>
+	
+			<xul:vbox flex="1">
+<!--
+			<xul:sidebarheader align="center">
+			<xul:label persist="value" flex="1" crop="end" value="アップロード画像"/>
+				<xul:toolbarbutton class="tabs-closebutton" tooltiptext="閉じます" oncommand="wass.closeImageBoard();" chromedir="ltr">
+					<xul:image class="toolbarbutton-icon"/>
+					<xul:label flex="1" crop="right" class="toolbarbutton-text"/>
+				</xul:toolbarbutton>
+			</xul:sidebarheader>
+-->
+
+			<xul:vbox id="wass_canvas_wrap">
+			<html:canvas id="wass_canvas"
+					ondrop="wass.catchDragEvents(event);"
+					ondragenter="wass.catchDragEvents(event);"
+					ondragover="wass.catchDragEvents(event);">
+			</html:canvas>
+			</xul:vbox>
+
+		</xul:vbox>
+	
+	</content>
+  </binding>
+
+
+</bindings>
